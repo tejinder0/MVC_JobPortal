@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "WorkingArea";
+    Layout = "~/MasterPage.cshtml";
+}
+
+
+
+
+<section class="ab-info-main py-md-5 py-4">
+    <div class="container py-md-5 py-4">
+        <h3 class="tittle text-center mb-lg-5 mb-3"><span class="sub-tittle">Find Us</span>Dash Board </h3>
+        <div class="row contact-main-info">
+            <div class="col-md-7 contact-right">
+                <a href='@Url.Action("placedJob","Job")'>  <input id="submit" class="btn submit" value="Click to View Job" /> </a><br />
+
+
+
+            </div>
+           <h1 class="btn submit"> @Html.ActionLink("Back ", "LoginArea")</h1>
+        </div>
+
+
+    </div>
+</section>
+

@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = " ";
+    Layout = "~/MasterPage.cshtml";
+}
+
+
+
+<section class="ab-info-main py-md-5 py-4">
+    <div class="container py-md-5 py-4">
+        <h3 class="tittle text-center mb-lg-5 mb-3"><span class="sub-tittle">Find Us</span>Admin Login </h3>
+        <div class="row contact-main-info">
+            <div class="col-md-7 contact-right">
+                <form action="Validate" method="post">
+                    <input id="AdminUserName" name="AdminUserName" type="text" class="email" placeholder="Email" required="" />
+
+                    <input id="AdminPassword" name="AdminPassword" class="email" type="text" placeholder="Password" required="" />
+
+                    <div class="read mt-3">
+                        <input id="submit" name="submit" type="submit" value="SignIn" class="btn submit" />
+
+
+                    </div>
+                </form>
+                <div class="read mt-3">
+                    <a href='@Url.Action("ContactArea","ContactArea")'> <input id="submit" class="btn submit" value="Contact us " /></a>
+</div>
+             
+            </div>
+
+            </div>
+
+
+    </div>
+</section>

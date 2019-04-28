@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "ContactArea";
+    Layout = "~/MasterPage.cshtml";
+}
+
+<h2>ContactArea</h2>
+
+
+<!--// mian-content -->
+<!-- banner -->
+<section class="ab-info-main py-md-5 py-4">
+    <div class="container py-md-5 py-4">
+        <h3 class="tittle text-center mb-lg-5 mb-3"><span class="sub-tittle">Find Us</span> Contact Us</h3>
+        <div class="row contact-main-info">
+            <div class="col-md-7 contact-right">
+                <form action="SendMsg" method="POST">
+
+                    <input id="SName" name="SName" type="text" class="email" placeholder="Name" required="" />
+
+
+                    <input id="SPhone" name="SPhone" class="email" type="text" placeholder="Phone No" required="" />
+
+                    <input id="SEmail" name="SEmail" class="email" type="text" placeholder="Email-ID" required="" />
+
+                    <input id="SMsg" name="SMsg" class="email" type="text" placeholder="Message" required="" />
+
+
+                    <div class="read mt-3">
+                        <input id="submit" name="submit" type="submit" value="Send Message" class="btn submit" />
+
+                        
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-5 contact-left">
+                <div class="address">
+                    <h5>Address:</h5>
+                    <p>
+                        <span class="fa fa-home"></span>321 Block,4th Building, 2nd Street
+                        <br> State 3489.
+                    </p>
+                </div>
+                <div class="address address-mdl">
+                    <h5>Phones:</h5>
+                    <p><span class="fa fa-phone"></span> +1(23) 4567 7890</p>
+                    <p><span class="fa fa-mobile"></span>+1(23) 4567 7891</p>
+                </div>
+                <div class="address">
+                    <h5>Email:</h5>
+                    <p><span class="fa fa-envelope"></span> <a href="mailto:mail@example.com">mail@example.com</a></p>
+                    <p><span class="fa fa-globe"></span> <a href="mailto:website@example.com">website@example.com</a></p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>

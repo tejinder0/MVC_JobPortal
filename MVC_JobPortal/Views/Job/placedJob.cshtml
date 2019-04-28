@@ -1,0 +1,75 @@
+﻿@model IEnumerable<MVC_JobPortal.Models.JobData>
+
+@{
+    ViewBag.Title = "Available Jobs";
+    Layout = "~/MasterPage.cshtml";
+}
+<br>
+<h2 >Available Job</h2>
+<br/>
+<br>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Designation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Posts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lastdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Designation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Posts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lastdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                <h1 class="btn btn-warning">  @Html.ActionLink("Edit", "Edit", new { id = item.id })</h1>
+            </td>
+            <td>
+                <h1 class="btn btn-warning">  @Html.ActionLink("Delete", "Delete", new { id = item.id })</h1>
+            </td>
+        </tr>
+    }
+</table> 
+<section class="ab-info-main py-md-5 py-4">
+    <div class="container py-md-5 py-4">
+        <div class="read mt-3">
+            <a href='@Url.Action("LoginArea","LoginArea")'> <input id="submit" class="btn btn-warning" value="Back to Dashboard" /></a>
+            
+            <div class="btn btn-warning"> @Html.ActionLink("Add New Job", "Create")</div>
+        </div>
+    </div>
+    
+</section>
